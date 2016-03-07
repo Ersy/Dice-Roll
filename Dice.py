@@ -7,8 +7,9 @@ Created on Sun Mar  6 23:59:36 2016
 
 import random
 
-def rollDice():
-    return (random.randint(1, 6))
+
+def rollDice(n):
+    return (random.randint(1, 6*n))
 
 
 correct = 0
@@ -18,6 +19,7 @@ running = True
 while running:
 
     try:
+        diceNo = int(input("Enter the number of dice "))
         rounds = int(input("Enter the number of rounds "))
     except ValueError:
         print ("Please enter a number")
@@ -31,11 +33,11 @@ while running:
 while rounds > 0:
     
     try:    
-        guess = int(input("Guess a number between 1 and 6 "))
+        guess = int(input(("Guess a number between 1 and "+ str(diceNo*6)+" ")))
     except ValueError:
         print ("Please enter a number")
         continue
-    answer = rollDice()
+    answer = rollDice(diceNo)
     if guess == answer:
         print ("The dice roll was ",answer)
         print ("You were correct!")
