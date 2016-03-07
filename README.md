@@ -1,5 +1,6 @@
 # Dice-Roll
 Roll a dice/die
 
+Set how many dices to use.
 Set how many rounds you'll play.
-Guess a number between 1 and 6.
+Guess a number.
